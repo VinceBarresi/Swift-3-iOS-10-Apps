@@ -13,6 +13,7 @@
 		03287AED1EDDEDE300D8D8D4 /* miracle_pill.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 03287AEB1EDDEDE300D8D8D4 /* miracle_pill.xcdatamodeld */; };
 		03287AEF1EDDEDE300D8D8D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03287AEE1EDDEDE300D8D8D4 /* Assets.xcassets */; };
 		03287AF21EDDEDE300D8D8D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03287AF01EDDEDE300D8D8D4 /* LaunchScreen.storyboard */; };
+		034623FA1EDF3E0100DD2450 /* SuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034623F91EDF3E0100DD2450 /* SuccessViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		03287AEE1EDDEDE300D8D8D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		03287AF11EDDEDE300D8D8D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		03287AF31EDDEDE300D8D8D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		034623F91EDF3E0100DD2450 /* SuccessViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuccessViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				03287AF01EDDEDE300D8D8D4 /* LaunchScreen.storyboard */,
 				03287AF31EDDEDE300D8D8D4 /* Info.plist */,
 				03287AEB1EDDEDE300D8D8D4 /* miracle_pill.xcdatamodeld */,
+				034623F91EDF3E0100DD2450 /* SuccessViewController.swift */,
 			);
 			path = "miracle pill";
 			sourceTree = "<group>";
@@ -142,6 +145,7 @@
 			files = (
 				03287AED1EDDEDE300D8D8D4 /* miracle_pill.xcdatamodeld in Sources */,
 				03287AE71EDDEDE300D8D8D4 /* ViewController.swift in Sources */,
+				034623FA1EDF3E0100DD2450 /* SuccessViewController.swift in Sources */,
 				03287AE51EDDEDE300D8D8D4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -304,6 +308,7 @@
 				03287AF81EDDEDE300D8D8D4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

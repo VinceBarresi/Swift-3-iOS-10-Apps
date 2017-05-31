@@ -10,14 +10,16 @@ import UIKit
 
 class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
 
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var streetTextField: UITextField!
+    @IBOutlet weak var cityTextField: UITextField!
     @IBOutlet weak var statePicker: UIPickerView!
     @IBOutlet weak var statePickerBtn: UIButton!
-    
     @IBOutlet weak var countryTextField: UITextField!
     @IBOutlet weak var countryLabel: UILabel!
     @IBOutlet weak var zipCodeLabel: UILabel!
     @IBOutlet weak var zipCodeTextField: UITextField!
-    @IBOutlet weak var buyNowImage: UIImageView!
+    @IBOutlet weak var buyNowImage: UIButton!
     @IBAction func stateButtonPressed(_ sender: Any) {
         statePicker.isHidden = false
         countryLabel.isHidden = true
@@ -25,9 +27,23 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         zipCodeLabel.isHidden = true
         zipCodeTextField.isHidden = true
         buyNowImage.isHidden = true
-        
     }
     
+    @IBAction func buyNowBtn(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "SuccessViewController")
+        
+        if nameTextField.text == "" { nameTextField.placeholder = "missing full name!" }
+        if streetTextField.text == "" { streetTextField.placeholder = "missing street address!" }
+        if cityTextField.text == "" { cityTextField.placeholder = "missing city!" }
+        
+        if countryTextField.text == "" { countryTextField.placeholder = "missing country!"}
+        if zipCodeTextField.text == "" { zipCodeTextField.placeholder = "missing zip code!" }
+        
+        if (nameTextField.hasText) && (streetTextField.hasText) && (cityTextField.hasText) && (countryTextField.hasText) && (zipCodeTextField.hasText) {
+                self.present(controller, animated: true, completion: nil)
+        }
+    }
     let states = ["Alaska",
                   "Alabama",
                   "Arkansas",
@@ -89,7 +105,6 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         statePicker.dataSource = self
         statePicker.delegate = self
         
-        
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -119,6 +134,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         zipCodeTextField.isHidden = false
         buyNowImage.isHidden = false
     }
+
 
 
 }

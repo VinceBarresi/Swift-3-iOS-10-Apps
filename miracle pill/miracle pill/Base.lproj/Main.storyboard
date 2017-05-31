@@ -144,19 +144,19 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="buyNowBtn" translatesAutoresizingMaskIntoConstraints="NO" id="a6O-5U-OS9">
-                                <rect key="frame" x="162" y="656" width="142" height="45"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="142" id="JQP-XT-fib"/>
-                                    <constraint firstAttribute="height" constant="45" id="mlS-7m-S7K"/>
-                                </constraints>
-                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hA8-jq-FwY">
+                                <rect key="frame" x="137" y="635" width="141" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="buyNowBtn"/>
+                                <connections>
+                                    <action selector="buyNowBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="65f-7Y-Jd3"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="bUf-10-2Pg" firstAttribute="top" secondItem="QWY-6m-Zwi" secondAttribute="bottom" constant="10" id="1ja-pu-DUF"/>
                             <constraint firstItem="af6-r4-N6q" firstAttribute="leading" secondItem="gal-Rg-37L" secondAttribute="leading" id="3tT-bR-SN9"/>
-                            <constraint firstItem="a6O-5U-OS9" firstAttribute="leading" secondItem="jkR-Pm-fVl" secondAttribute="leading" id="5c5-P1-Vai"/>
                             <constraint firstItem="mLd-FP-ntB" firstAttribute="leading" secondItem="IzS-eU-KR2" secondAttribute="leading" id="5t9-jI-Tyj"/>
                             <constraint firstItem="gal-Rg-37L" firstAttribute="leading" secondItem="CPp-Ud-I2h" secondAttribute="leading" id="6wA-0q-qoc"/>
                             <constraint firstItem="CPp-Ud-I2h" firstAttribute="trailing" secondItem="c9x-7v-jkd" secondAttribute="trailing" id="7Hu-LF-XfX"/>
@@ -184,7 +184,6 @@
                             <constraint firstItem="WQX-eb-xdo" firstAttribute="leading" secondItem="gal-Rg-37L" secondAttribute="leading" id="b2o-XX-xbP"/>
                             <constraint firstItem="tbF-PR-tJE" firstAttribute="trailing" secondItem="l2p-Tg-1CZ" secondAttribute="trailing" id="dtc-Yb-mYr"/>
                             <constraint firstItem="SB8-7g-lpu" firstAttribute="centerX" secondItem="af6-r4-N6q" secondAttribute="centerX" id="e8a-eI-r9c"/>
-                            <constraint firstItem="a6O-5U-OS9" firstAttribute="top" secondItem="SB8-7g-lpu" secondAttribute="bottom" constant="8" id="g1k-gu-d2A"/>
                             <constraint firstItem="LpX-9g-Zhn" firstAttribute="top" secondItem="af6-r4-N6q" secondAttribute="bottom" constant="8" id="hcA-pP-vLM"/>
                             <constraint firstItem="jkR-Pm-fVl" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="j4p-6B-AjS"/>
                             <constraint firstItem="awT-3R-9Ee" firstAttribute="top" secondItem="tbF-PR-tJE" secondAttribute="bottom" constant="10" id="jQl-El-lUF"/>
@@ -205,11 +204,14 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="buyNowImage" destination="a6O-5U-OS9" id="XAe-yq-CXt"/>
+                        <outlet property="buyNowImage" destination="hA8-jq-FwY" id="R6q-QP-Sf0"/>
+                        <outlet property="cityTextField" destination="gal-Rg-37L" id="yKP-bV-haA"/>
                         <outlet property="countryLabel" destination="WQX-eb-xdo" id="PIF-rS-V17"/>
-                        <outlet property="countryTextField" destination="l2p-Tg-1CZ" id="iKU-Rv-doi"/>
+                        <outlet property="countryTextField" destination="l2p-Tg-1CZ" id="sXF-44-NKD"/>
+                        <outlet property="nameTextField" destination="mLd-FP-ntB" id="Bbu-yK-CxD"/>
                         <outlet property="statePicker" destination="SB8-7g-lpu" id="L4C-kp-r7e"/>
                         <outlet property="statePickerBtn" destination="LpX-9g-Zhn" id="4tM-46-DgN"/>
+                        <outlet property="streetTextField" destination="c9x-7v-jkd" id="XtC-sP-XTV"/>
                         <outlet property="zipCodeLabel" destination="tbF-PR-tJE" id="21X-fu-RPv"/>
                         <outlet property="zipCodeTextField" destination="awT-3R-9Ee" id="oXC-h4-2MT"/>
                     </connections>
@@ -218,9 +220,34 @@
             </objects>
             <point key="canvasLocation" x="131.8840579710145" y="135.32608695652175"/>
         </scene>
+        <!--SuccessViewController-->
+        <scene sceneID="prc-wd-8QI">
+            <objects>
+                <viewController storyboardIdentifier="SuccessViewController" title="SuccessViewController" id="Owt-gc-OFc" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jKa-kP-U2x"/>
+                        <viewControllerLayoutGuide type="bottom" id="elY-ra-aEV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Dva-rM-9Na">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="successIndicator" translatesAutoresizingMaskIntoConstraints="NO" id="SJz-JY-SOa">
+                                <rect key="frame" x="87" y="241" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YuW-5F-ye2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="890" y="135"/>
+        </scene>
     </scenes>
     <resources>
         <image name="buyNowBtn" width="225" height="45"/>
         <image name="miraclePillEmoji" width="90" height="90"/>
+        <image name="successIndicator" width="180" height="180"/>
     </resources>
 </document>
