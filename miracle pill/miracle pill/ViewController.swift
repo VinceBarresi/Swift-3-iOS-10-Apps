@@ -36,11 +36,10 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         if nameTextField.text == "" { nameTextField.placeholder = "missing full name!" }
         if streetTextField.text == "" { streetTextField.placeholder = "missing street address!" }
         if cityTextField.text == "" { cityTextField.placeholder = "missing city!" }
-        if statePickerBtn.currentTitle == "Choose your state" { }
         if countryTextField.text == "" { countryTextField.placeholder = "missing country!"}
         if zipCodeTextField.text == "" { zipCodeTextField.placeholder = "missing zip code!" }
         
-        if (nameTextField.hasText) && (streetTextField.hasText) && (cityTextField.hasText) && (countryTextField.hasText) && (zipCodeTextField.hasText) && (statePickerBtn.currentTitle != "Choose Your S tate") {
+        if (nameTextField.hasText) && (streetTextField.hasText) && (cityTextField.hasText) && (countryTextField.hasText) && (zipCodeTextField.hasText) && (statePickerBtn.currentTitle != "Choose Your State") {
                 self.present(controller, animated: true, completion: nil)
         }
     }
