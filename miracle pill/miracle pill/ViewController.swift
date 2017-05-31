@@ -53,7 +53,6 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
                   "Delaware",
                   "Florida",
                   "Georgia",
-                  "Guam",
                   "Hawaii",
                   "Iowa",
                   "Idaho",
